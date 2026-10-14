@@ -1,0 +1,32 @@
+name: "Update Helm chart versions in helmfiles"
+
+scms:
+  default:
+    kind: github
+    spec:
+      user: "{{ .github.user }}"
+      email: "{{ .github.email }}"
+      owner: "{{ .github.owner }}"
+      repository: "{{ .github.repository }}"
+      token: "{{ requiredEnv .github.token }}"
+      username: "{{ .github.username }}"
+      branch: "{{ .github.branch }}"
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    spec:
+      labels:
+        - dependencies
+
+autodiscovery:
+  scmid: default
+  actionid: default
+  groupby: all
+  crawlers:
+    helmfile:
+      rootdir: clusters
+      ignore:
+        - charts:
+            "ingress-nginx": ""
