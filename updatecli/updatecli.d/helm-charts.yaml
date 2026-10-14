@@ -23,7 +23,7 @@ actions:
 autodiscovery:
   scmid: default
   actionid: default
-  groupby: all
+  groupby: resource
   crawlers:
     helmfile:
       rootdir: clusters
