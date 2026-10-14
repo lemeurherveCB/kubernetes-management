@@ -3,5 +3,5 @@ github:
   email: "60776566+jenkins-infra-bot@users.noreply.github.com"
   token: "UPDATECLI_GITHUB_TOKEN"
   branch: "main"
-  owner: "jenkins-infra"
+  owner: "lemeurherveCB"
   repository: "kubernetes-management"
