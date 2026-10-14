@@ -24,6 +24,7 @@ autodiscovery:
   scmid: default
   actionid: default
   groupby: resource
+  resourcelabelprefix: "chart:"
   crawlers:
     helmfile:
       rootdir: clusters
